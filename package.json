@@ -1,0 +1,62 @@
+{
+  "name": "jsreport-weasyprint",
+  "version": "0.1.0",
+  "keywords": [
+    "jsreport",
+    "weasyprint",
+    "recipe"
+  ],
+  "description": "jsreport recipe using weasyprint based html to pdf conversion",
+  "homepage": "https://github.com/jsreport/jsreport-weasyprint",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsreport/jsreport-weasyprint.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jan Blaha",
+    "email": "jan.blaha@hotmail.com",
+    "url": "http://janblaha.net"
+  },
+  "main": "lib/index.js",
+  "scripts": {    
+    "test": "standard",
+    "lint": "standard",
+    "build": "jsreport-studio-build",
+    "prepublish": "in-publish && jsreport-studio-build || not-in-publish",
+    "docker": "npm run build && docker rm -f test & docker build -f Dockerfile.dev -t test . && docker run --name test -p 5488:5488 test"
+  },
+  "standard": {
+    "ignore": [
+      "main.js"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "mocha": true,
+      "browser": true
+    }
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "in-publish": "2.0.0",    
+    "mkdirp": "0.5.1",  
+    "object-assign": "4.1.1",
+    "phantom-workers": "0.4.2",
+    "uuid": "3.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "eslint": "4.4.1",
+    "eslint-config-standard-jsx": "4.0.2",
+    "eslint-plugin-babel": "4.1.2",   
+    "jsreport-studio-dev": "1.1.1",   
+    "standard": "10.0.3"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "jsreport.config.js",
+    "studio"
+  ]
+}
