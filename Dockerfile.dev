@@ -1,4 +1,4 @@
-FROM jsreport/jsreport:1.8.1
+FROM jsreport/jsreport:1.8.2
 MAINTAINER Jan Blaha
 EXPOSE 5488
 
@@ -9,14 +9,14 @@ RUN apt-get update && \
 
 RUN pip3 install WeasyPrint 
 
-RUN mkdir -p /usr/src/app/node_modules/jsreport-weasyprint
-WORKDIR /usr/src/app/node_modules/jsreport-weasyprint
+RUN mkdir -p /usr/src/app/node_modules/jsreport-weasyprint-pdf
+WORKDIR /usr/src/app/node_modules/jsreport-weasyprint-pdf
 
-COPY package.json /usr/src/app/node_modules/jsreport-weasyprint
+COPY package.json /usr/src/app/node_modules/jsreport-weasyprin-pdft
 RUN npm install && \
     npm cache clean -f
 
-COPY . /usr/src/app/node_modules/jsreport-weasyprint
+COPY . /usr/src/app/node_modules/jsreport-weasyprint-pdf
 
 WORKDIR /usr/src/app
 
