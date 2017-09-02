@@ -1,5 +1,5 @@
 {
-  "name": "jsreport-weasyprint",
+  "name": "jsreport-weasyprint-pdf",
   "version": "0.2.0",
   "keywords": [
     "jsreport",
@@ -7,7 +7,7 @@
     "recipe"
   ],
   "description": "jsreport recipe using weasyprint based html to pdf conversion",
-  "homepage": "https://github.com/jsreport/jsreport-weasyprint",
+  "homepage": "https://github.com/jsreport/jsreport-weasyprint-pdf",
   "repository": {
     "type": "git",
     "url": "git://github.com/jsreport/jsreport-weasyprint.git"

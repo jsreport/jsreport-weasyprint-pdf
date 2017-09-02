@@ -1,5 +1,5 @@
 module.exports = {
-  'name': 'weasyprint',
+  'name': 'weasyprint-pdf',
   'main': 'lib/weasyprint.js',
   'dependencies': ['templates']  
 }
