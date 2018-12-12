@@ -1,4 +1,4 @@
-FROM jsreport/jsreport:1.8.2
+FROM jsreport/jsreport:2.3.0-full
 MAINTAINER Jan Blaha
 EXPOSE 5488
 
@@ -12,4 +12,6 @@ RUN pip3 install WeasyPrint
 RUN npm install jsreport-weasyprint-pdf && \
     npm cache clean -f
 
-CMD ["bash", "/usr/src/app/run.sh"]
+COPY run.sh run.sh    
+
+CMD ["bash", "/app/run.sh"]
