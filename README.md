@@ -1,3 +1,6 @@
+⚠️ This extension is deprecated and is compatible only with the jsreport v2
+--
+
 # jsreport-weasyprint-pdf
 
 jsreport recipe using [WeasyPrint](http://weasyprint.org/) utility to convert html to pdf. This recipe solves the same task as [phantom-pdf](https://jsreport.net/learn/phantom-pdf), [wkhtmltopdf](https://jsreport.net/learn/wkhtmltopdf) or [electron-pdf](https://github.com/bjrmatos/jsreport-electron-pdf). However it has the best support for defining printing layout using [css @page rule](https://developer.mozilla.org/en/docs/Web/CSS/@page).
